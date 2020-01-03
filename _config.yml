@@ -9,9 +9,9 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Your Name"
+title                    : "Bryan Ross"
 title_separator          : "-"
-name                     : "Your Name"
+name                     : "Bryan Ross"
 description              : "Data Science Portfolio"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
@@ -84,10 +84,10 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
-  avatar           : "/images/bio-pic-2.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  name             : "Bryan Ross"
+  avatar           : "https://avatars3.githubusercontent.com/u/40834763?s=400&u=68e258ff600598811e246af06b7d945748d6af32&v=4" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Data Science Portfolio"
-  location         : "Your Location"
+  location         : "Los Angeles, CA"
   email            :
   uri              :
   home             : # null (default), "absolute or relative url to link to author home"
