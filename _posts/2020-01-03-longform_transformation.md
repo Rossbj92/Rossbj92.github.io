@@ -3,13 +3,15 @@ title: "Inclusion of the Brand in Self (IBIS)"
 date: 2020-01-03
 tags: [data wrangling, longform]
 header:
-  image: "/images/diary.jpg"
+  overlay_image: "/images/diary.jpg"
 excerpt: ""
 mathjax: "true"
+classes: wide
 ---
 
 `{:.no_toc}
 # Table of Contents 
+`
 
 1. TOC
 {:toc}
