@@ -8,6 +8,7 @@ excerpt: ""
 mathjax: "true"
 toc: true
 toc_label: "Table of Contents"
+toc_icon: "heart"
 ---
 
 This collection of notebooks surrounds a diary study that I assisted with. Diary studies are longitudinal studies in which participants routinely complete surveys throughout. These are especially useful for tracking things such as mood, exercise/diet habits, and for our intents and purposes, social media usage. 
