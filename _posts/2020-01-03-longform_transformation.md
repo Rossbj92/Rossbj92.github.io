@@ -8,10 +8,10 @@ excerpt: ""
 mathjax: "true"
 ---
 
-* Do not remove this line (it will not be displayed)
-#markdown-toc ul {
-    list-style: decimal;
-}
+`{:.no_toc}
+# Table of Contents 
+
+1. TOC
 {:toc}
 
 # Study Overview
