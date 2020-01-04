@@ -3,7 +3,7 @@ title: "Inclusion of the Brand in Self (IBIS)"
 date: 2020-01-03
 tags: [data wrangling, longform]
 header:
-  image: "/images/perceptron/data-transformation.png"
+  image: "/images/data-transformation.png"
 excerpt: ""
 mathjax: "true"
 ---
@@ -16,7 +16,7 @@ In the initial survey (day 0), participants were asked to give several different
 3. Likelihood to recomment ("_rec")
 
 The IBIS measure is adapted from the Inclusion of Others in Self (IOS) scale, originally developed as a way to measure to measure intimacy. Individuals are simply asked about their relationship with a partner and shown a series of increasingly overlapping circles - the idea being that more overlap will indicate stronger relationships.
-<img src="{{ site.url }}{{ site.baseurl }}/images/ios.png" alt="linearly separable data">
+<img src="/images/ios.png" alt="linearly separable data">
 Adaptation of this measure was originally proposed following the rise in the theoretical perspective of brand relationships, or the notion that individuals develop relationships with brands similarly to ones with other other people. The bulk of the work concerning this measure had been mostly conceptual, and to date, our study would be the first using actual usage data.
 
 We had 2 main questions:
