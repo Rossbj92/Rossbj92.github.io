@@ -1,12 +1,12 @@
 ---
 title: "Inclusion of the Brand in Self (IBIS)"
 date: 2020-01-03
+toc: "true"
 tags: [data wrangling, longform]
 header:
   image: "/images/diary.jpg"
 excerpt: ""
 mathjax: "true"
-toc: "true"
 ---
 
 # Study Overview
