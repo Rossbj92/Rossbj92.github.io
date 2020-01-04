@@ -25,7 +25,7 @@ We had 2 main questions:
 1. Does IBIS prospectively predict usage?
 2. If so, how does it perform relative to other widely used measures?
 
-#Day 0 Transformation
+# Day 0 Transformation
 
 First, we'll need to import the libraries that we will need. The "set_option" parameters are there to make viewing all of the columns easier.
 
@@ -1974,7 +1974,7 @@ day_zero_master.sort_values('participant').head(12)
 
 Next, we bring in the weekly survey data. We'll need to make the same long-form transformations before we merge them to the initial survey.
 
-#Weekly Survey Transformations
+# Weekly Survey Transformations
 
 ```python
 wk_one = pd.read_csv('week_one.csv')
