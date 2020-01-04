@@ -1,31 +1,47 @@
 ---
-title: "Inclusion of the Brand in Self"
+title: "Inclusion of the Brand in Self (IBIS)"
 date: 2020-01-03
-tags: [data wrangling, multilevel modeling]
+tags: [data wrangling, longform]
 header:
-  image: "/images/perceptron/percept.jpg"
+  image: "/images/perceptron/data-transformation.png"
 excerpt: ""
 mathjax: "true"
 ---
 
+In this notebook, I'll be walking through the process of converting the raw study data from wide to long format. All of the accompanying datasets can be found here [insert link].
+
+In the initial survey (day 0), participants were asked to give several different types of ratings for 6 social media platforms: Facebook, Youtube, Snapchat, Instagram, Twitter, and Pinterest. Aside from the IBIS measure, several ubiquitous market research measures were used:
+1. Purchase Intention ("_use")
+2. Overall opinion ("_op")
+3. Likelihood to recomment ("_rec")
+
+The IBIS measure is adapted from the Inclusion of Others in Self (IOS) scale, originally developed as a way to measure to measure intimacy. Individuals are simply asked about their relationship with a partner and shown a series of increasingly overlapping circles - the idea being that more overlap will indicate stronger relationships.
+<img src="{{ site.url }}{{ site.baseurl }}/images/ios.png" alt="linearly separable data">
+Adaptation of this measure was originally proposed following the rise in the theoretical perspective of brand relationships, or the notion that individuals develop relationships with brands similarly to ones with other other people. The bulk of the work concerning this measure had been mostly conceptual, and to date, our study would be the first using actual usage data.
+
+We had 2 main questions:
+1. Does IBIS prospectively predict usage?
+2. If so, how does it perform relative to other widely used measures?
+
+#Day 0 Transformation
+
+First, we'll need to import the libraries that we will need. The "set_option" parameters are there to make viewing all of the columns easier.
+
+There were several components to the overall experiment, and this current cleaning/analysis will focus on social media platforms.
+
 ```python
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
 pd.set_option('display.max_rows', 500)
 pd.set_option('display.max_columns', 500)
 pd.set_option('display.width', 1000)
 ```
 
+Let's take a look at the data.
 
 ```python
 day_zero = pd.read_csv('day_zero.csv')
-```
 
-# Social media platforms and various brands will be analyzed separately, so for data management ease...
-
-
-```python
 day_zero.head()
 ```
 
@@ -1212,8 +1228,7 @@ day_zero.head()
 </table>
 </div>
 
-
-
+Now, we need to grab the relevant social media columns.
 
 ```python
 #Getting social media columns and sorting
@@ -1221,10 +1236,7 @@ sm_cols = [col for col in day_zero if 'participant' in col or 'facebook' in col
           or 'youtube' in col or 'snapchat' in col or 'instagram' in col
           or 'twitter' in col or 'pinterest' in col]
 sm_cols.sort()
-```
 
-
-```python
 day_zero_sm = day_zero[sm_cols]
 day_zero_sm.head()
 ```
@@ -1566,10 +1578,7 @@ day_zero_sm.head()
 </table>
 </div>
 
-
-
-# Brand/platform ratings were counterbalanced, which is why there are so many missing values. To simplify the columns for analysis, I'll simply fill the NAs with 0s and add each respective platform's columns together.
-
+ Brand/platform ratings were counterbalanced, which is why there are so many missing values. To simplify the columns for analysis, I'll simply fill the NAs with 0s and add each respective platform's columns together.
 
 ```python
 platforms = ['facebook', 'youtube', 'snapchat', 'instagram', 'twitter', 'pinterest']
@@ -1584,15 +1593,6 @@ for platform in platforms:
         )
 
 ```
-
-    C:\Users\Bryan\AppData\Local\Continuum\anaconda3\lib\site-packages\ipykernel_launcher.py:9: SettingWithCopyWarning:
-    A value is trying to be set on a copy of a slice from a DataFrame.
-    Try using .loc[row_indexer,col_indexer] = value instead
-
-    See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
-      if __name__ == '__main__':
-
-
 
 ```python
 #Filtering and renaming 'final' columns
@@ -1815,24 +1815,14 @@ for platform in platforms:
     df_dict[platform].columns = [col.split('_')[-1] for col in df_dict[platform].columns]
 ```
 
-    C:\Users\Bryan\AppData\Local\Continuum\anaconda3\lib\site-packages\ipykernel_launcher.py:8: SettingWithCopyWarning:
-    A value is trying to be set on a copy of a slice from a DataFrame.
-    Try using .loc[row_indexer,col_indexer] = value instead
-
-    See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
-
-
-
 
 ```python
 day_zero_master = pd.concat([df_dict[k] for k,v in df_dict.items()])
 ```
 
-# Now that the data are in long-form, each participant should have 6 entries (i.e., 1 entry per platform)
-
+Now that the data are in long-form, each participant should have 6 entries (i.e., 1 entry per platform). Let's do a quick sanity check.
 
 ```python
-#Sanity check
 day_zero_master.sort_values('participant').head(12)
 ```
 
@@ -1980,17 +1970,15 @@ day_zero_master.sort_values('participant').head(12)
 
 
 
-# Next, we bring in the weekly survey data. We'll need to make the same long-form transformations before we merge them to the initial survey.
+Next, we bring in the weekly survey data. We'll need to make the same long-form transformations before we merge them to the initial survey.
 
+#Weekly Survey Transformations
 
 ```python
 wk_one = pd.read_csv('week_one.csv')
 wk_two = pd.read_csv('week_two.csv')
 wk_three= pd.read_csv('week_three.csv')
-```
 
-
-```python
 wk_one.head()
 ```
 
@@ -2219,18 +2207,7 @@ for i in range(len(wk_dfs)):
 
     #Adding in a column for week #
     wk_dfs[i]['week'] = i+1
-```
 
-    C:\Users\Bryan\AppData\Local\Continuum\anaconda3\lib\site-packages\ipykernel_launcher.py:10: SettingWithCopyWarning:
-    A value is trying to be set on a copy of a slice from a DataFrame.
-    Try using .loc[row_indexer,col_indexer] = value instead
-
-    See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
-      # Remove the CWD from sys.path while we load stuff.
-
-
-
-```python
 wk_dfs[0].head()
 ```
 
@@ -2327,9 +2304,9 @@ wk_dfs[0].head()
 
 
 
-# To convert this to long-form, we'll use the "melt" function.
+To convert this to long-form, we'll use the "melt" function.
 
-# Below is a brief demo of what each week's df will look like, as well as the annotated code.
+Below is a brief demo of what each week's df will look like, as well as the annotated code.
 
 
 ```python
@@ -2663,9 +2640,9 @@ weekly_long.head(19)
 
 
 
-# Things look good! All that's left now is to merge the master weekly df to the initial.
+Things look good! All that's left now is to merge the master weekly df to the initial.
 
-# Each participant will still have 6 entries per week, and their initial ratings that they gave each brand will be on that corresponding entry.
+Each participant will still have 6 entries per week, and their initial ratings that they gave each brand will be on that corresponding entry.
 
 
 ```python
