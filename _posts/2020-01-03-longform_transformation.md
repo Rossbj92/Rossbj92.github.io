@@ -9,10 +9,7 @@ mathjax: "true"
 classes: wide
 ---
 
-`{:.no_toc}
-# Table of Contents 
-`
-
+**Table of Contents**
 1. TOC
 {:toc}
 
@@ -57,7 +54,9 @@ day_zero.head()
 
 
 
-
+figure {
+  width: 100%;
+}
 <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
