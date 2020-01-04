@@ -6,9 +6,9 @@ header:
   image: "/images/diary.jpg"
 excerpt: ""
 mathjax: "true"
-toc: true
+toc: "true"
 toc_label: "Table of Contents"
-toc_icon: "heart"
+toc_sticky: "true"
 ---
 
 # Study Overview
