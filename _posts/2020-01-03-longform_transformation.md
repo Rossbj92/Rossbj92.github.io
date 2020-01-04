@@ -11,8 +11,7 @@ toc_label: "Table of Contents"
 toc_icon: "heart"
 ---
 
-* TOC
-{:toc}
+# Study Overview
 This collection of notebooks surrounds a diary study that I assisted with. Diary studies are longitudinal studies in which participants routinely complete surveys throughout. These are especially useful for tracking things such as mood, exercise/diet habits, and for our intents and purposes, social media usage. 
 
 In this notebook, I'll be walking through the process of converting the raw data from wide to long format. All of the accompanying datasets can be found here [insert link].
@@ -31,7 +30,6 @@ We had 2 main questions:
 2. If so, how does it perform relative to other widely used measures?
 
 # Day 0 Transformation
-
 First, we'll need to import the libraries that we will need. The "set_option" parameters are there to make viewing all of the columns easier.
 
 There were several components to the overall experiment, and this current cleaning/analysis will focus on social media platforms.
