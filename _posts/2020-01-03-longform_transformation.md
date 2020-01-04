@@ -9,44 +9,10 @@ mathjax: "true"
 ---
 
 * Do not remove this line (it will not be displayed)
-{:toc
-// Adding 'Contents' headline to the TOC
-#markdown-toc::before {
-    content: "Contents";
-    font-weight: bold;
-}
-
-
-// Using numbers instead of bullets for listing
 #markdown-toc ul {
     list-style: decimal;
 }
-
-#markdown-toc {
-    border: 1px solid #aaa;
-    padding: 1.5em;
-    list-style: decimal;
-    display: inline-block;
-}}
-
-// Adding 'Contents' headline to the TOC
-markdown-toc::before {
-    content: "Contents";
-    font-weight: bold;
-}
-
-
-// Using numbers instead of bullets for listing
-markdown-toc ul {
-    list-style: decimal;
-}
-
-markdown-toc {
-    border: 1px solid #aaa;
-    padding: 1.5em;
-    list-style: decimal;
-    display: inline-block;
-}
+{:toc}
 
 # Study Overview
 This collection of notebooks surrounds a diary study that I assisted with. Diary studies are longitudinal studies in which participants routinely complete surveys throughout. These are especially useful for tracking things such as mood, exercise/diet habits, and for our intents and purposes, social media usage. 
