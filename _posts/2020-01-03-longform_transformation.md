@@ -11,6 +11,8 @@ toc_label: "Table of Contents"
 toc_icon: "heart"
 ---
 
+* TOC
+{:toc}
 This collection of notebooks surrounds a diary study that I assisted with. Diary studies are longitudinal studies in which participants routinely complete surveys throughout. These are especially useful for tracking things such as mood, exercise/diet habits, and for our intents and purposes, social media usage. 
 
 In this notebook, I'll be walking through the process of converting the raw data from wide to long format. All of the accompanying datasets can be found here [insert link].
