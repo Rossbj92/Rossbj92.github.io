@@ -54,9 +54,7 @@ day_zero.head()
 
 
 
-figure {
-  width: 100%;
-}
+
 <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
