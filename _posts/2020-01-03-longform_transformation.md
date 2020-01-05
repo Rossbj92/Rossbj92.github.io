@@ -8,6 +8,7 @@ excerpt: ""
 mathjax: "true"
 classes: wide
 toc: true
+toc_sticky: true
 ---
 
 # Study Overview
