@@ -1,7 +1,7 @@
 ---
-title: "Inclusion of the Brand in Self (IBIS)"
+title: "Inclusion of the Brand in Self - Part 1 (Data Preparation)"
 date: 2020-01-03
-tags: [data wrangling, longform]
+tags: [data wrangling, longform data, diary study]
 header:
   overlay_image: "/images/diary.jpg"
 excerpt: ""
