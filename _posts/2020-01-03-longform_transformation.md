@@ -8,7 +8,6 @@ excerpt: ""
 mathjax: "true"
 classes: wide
 toc: true
-toc_sticky: true
 ---
 
 **Table of Contents**
@@ -29,7 +28,7 @@ The IBIS measure is adapted from the Inclusion of Others in Self (IOS) scale, or
 
 <img src="/images/ios.png" alt="linearly separable data">
 
-Adaptation of this measure was originally proposed following the rise in the theoretical perspective of brand relationships, or the notion that individuals develop relationships with brands similarly to ones with other other people. The bulk of the work concerning this measure had been mostly conceptual, and to date, our study would be the first using actual usage data.
+Adaptation of this measure was originally proposed following the rise in the theoretical perspective of brand relationships, or the notion that individuals develop relationships with brands similarly to ones formed with other people. The bulk of the work concerning this measure had been mostly conceptual, and to date, our study would be the first using actual usage data.
 
 We had 2 main questions:
 1. Does IBIS prospectively predict usage?
