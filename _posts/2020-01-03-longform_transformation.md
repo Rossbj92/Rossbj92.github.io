@@ -6,7 +6,7 @@ header:
   overlay_image: "/images/diary.jpg"
 excerpt: ""
 mathjax: "true"
-classes: wide
+#classes: wide
 toc: true
 toc_sticky: true
 ---
