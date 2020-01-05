@@ -7,6 +7,8 @@ header:
 excerpt: ""
 mathjax: "true"
 classes: wide
+toc: true
+toc_sticky: true
 ---
 
 **Table of Contents**
