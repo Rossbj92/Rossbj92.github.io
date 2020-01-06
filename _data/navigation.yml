@@ -1,7 +1,7 @@
 # main links
 main:
    - title: "Portfolio"
-     url: /about/
+     url: /docs/_portfolio/
    - title: "Sample Posts"
      url: /_posts/
   # - title: "Sample Collections"
