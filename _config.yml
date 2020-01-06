@@ -112,6 +112,7 @@ author:
   bio              : "Clinical psychology graduate student."
   location         : "Los Angeles, CA"
   email            : "bryan.ross.529@my.csun.edu"
+  github           : "https://github.com/Rossbj92"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
