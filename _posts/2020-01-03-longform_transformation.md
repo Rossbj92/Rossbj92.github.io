@@ -6,7 +6,6 @@ tags: [data wrangling, longform data, diary study]
 header:
   overlay_image: "/images/diary.jpg"
   teaser: "/images/diary.jpg"
-excerpt: ""
 mathjax: "true"
 #classes: wide
 toc: true
