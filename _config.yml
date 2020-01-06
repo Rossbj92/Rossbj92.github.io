@@ -112,11 +112,10 @@ author:
   bio              : "Clinical psychology graduate student."
   location         : "Los Angeles, CA"
   email            : "bryan.ross.529@my.csun.edu"
-  github           : "https://github.com/Rossbj92"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-       url: mailto:bryan.ross.529@my.csun.edu
+      url: mailto:bryan.ross.529@my.csun.edu
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
@@ -128,10 +127,10 @@ author:
       # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-       url: "https://github.com/Rossbj92"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      # url: "https://instagram.com/"
+      url: "https://github.com/Rossbj92"
+    - label: "Linkedin"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/bryan-ross-07871452/"
 
 # Site Footer
 footer:
