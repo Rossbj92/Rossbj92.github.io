@@ -1,9 +1,11 @@
 ---
 title: "Inclusion of the Brand in Self - Part 1 (Data Preparation)"
+excerpt: "Part 1 of 3: Initial data cleaning and transformation for analysis."
 date: 2020-01-03
 tags: [data wrangling, longform data, diary study]
 header:
   overlay_image: "/images/diary.jpg"
+  teaser: "/images/diary.jpg"
 excerpt: ""
 mathjax: "true"
 #classes: wide
