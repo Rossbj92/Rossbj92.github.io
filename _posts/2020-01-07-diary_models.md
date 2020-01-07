@@ -75,7 +75,7 @@ head(data)
 
 We first fit a fixed intercept-only model to establish a baseline. When we compare models to see if random intercepts are justified, we need a way to quantify this. To do so, we will be doing chi-square difference tests. Each model will have an associated log-likelihood value; by subtracting our proposed model's log-likelihood from the prior model, we can perform a chi-square test to check for significant differences. With a lower log-likelihood indicating greater model fit, a significant, positive chi-square difference justifies the new model. If this is confusing, we'll set it in action in a moment.
 
-First, we need to establish our bsaeline.
+First, we need to establish our baseline.
 
 
 ```r
@@ -137,7 +137,9 @@ summary(rand_int_parts)
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ```
 
-Something new we see in this output is the "Random effects" table. In the ```r participants``` row, we get a variance score that we can use to examine the depedence of errors discussed above. We can do this by calculating the intraclass correlation (ICC), which will give us a value that measures how much of the variation in the data is due to - in our current case - participant differences. We can manually calculate this by dividing the participant variance by the total variance: $$ICC=6.323/(6.323+39.410)=0.138$$. In other words, 13.8% of the data's variation is due to participant differences! This is not a ton, but it is not meaningless either.
+Something new we see in this output is the ```Random effects``` table. In the ```participants``` row, we get a variance score that we can use to examine the dependence of errors discussed above. We can do this by calculating the intraclass correlation (ICC), which will give us a value that measures how much of the variation in the data is due to - in our current case - participant differences.
+
+We can manually calculate this by dividing the participant variance by the total variance: $$ICC=6.323/(6.323+39.410)=0.138$$. In other words, 13.8% of the data's variation is due to participant differences! This is not a ton, but it is not meaningless either.
 
 To see if accounting for these differences is worthwhile, let's compare the 2 models.
 
@@ -165,7 +167,7 @@ We can see that there is a reduction in log-likelihood of 184.65, and with p < 0
 
 ## Random-intercepts - Platforms
 
-Now, we'll add in random-intercepts for platforms. We will do so with participant intercepts still in the model.
+Now, we'll add in random-intercepts for platforms. We will do so with participant intercepts still in the model since the previous test dictated their inclusion.
 
 
 ```r
@@ -200,7 +202,7 @@ summary(rand_int_parts_platforms)
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ```
 
-We can calculate the ICC for platforms here as well: $$ICC=5.064/(5.064+6.696+34.053)=0.111$$. So 11.1% of the variation in the data is due to platform differences, and together, participant and platform differences account for 25.7% of the total variation ($$(5.064 + 6.696)/(5.064+6.696+34.053)=$$)! These findings are in line with what we gathered from the visualizations and further demonstrate the strengths of MLM. We've accounted for what would have been a significant amount of noise in a typical linear regression.
+We can calculate the ICC for platforms here as well: $$ICC=5.064/(5.064+6.696+34.053)=0.111$$. So 11.1% of the variation in the data is due to platform differences, and together, participant and platform differences account for 25.7% of the total variation ($$(5.064 + 6.696)/(5.064+6.696+34.053)=0.257$$)! These findings are in line with what we gathered from the visualizations and further demonstrate the strengths of MLM. We've accounted for what would have been a significant amount of noise in a typical linear regression.
 
 Let's validate that random-intercepts for platforms is indeed justified.
 
@@ -275,7 +277,7 @@ Looking at the ```fixed effects``` table, we see that the coefficient for IBIS (
 
 ### Full Model
 
-The second research question concerned IBIS's performance relative to other popular measures. As we saw in the EDA portion, these measures do have moderate-strong correlations. We will use the variable inflation factor (VIF) to keep an eye on multicollinearity in the model. In short, VIF regresses each predictor on the others and returns a value; in general, a VIF > 10 is cause for concern.
+The second research question concerned IBIS's performance relative to other popular measures. As we saw in the EDA portion, these measures do have moderate-strong correlations. We will use the variable inflation factor (VIF) to keep an eye on multicollinearity in the model. In short, VIF regresses each predictor on the others and returns a value. In general, a VIF > 10 is cause for concern.
 
 Since the measures are on different scales (e.g., IBIS is 1-7, use intent is 1-6), we'll also need to scale the variables. This changes the coefficient interpretations, so now instead a 1-unit increase, it will be a 1-standard deviation increase. This will allow us to directly compare the strength of each coefficient, though. Let's fit the model!
 
@@ -341,6 +343,6 @@ Looking at the VIF values, we can confirm that there is not a drastic amount of 
 
 # Conclusion
 
-We did find evidence that IBIS does indeed predict social media usage. Although IBIS was outperformed by use intention, that it remained significant when controlling for use intention is impressive. Additionally, it outperformed 2 other common measures used in market research: overall opinion and likelihood to recommend.
+We did find evidence that IBIS does indeed predict social media usage. Although IBIS was outperformed by use intention, that it remained significant when controlling for all other predictors is impressive. Additionally, it outperformed 2 other common measures used in market research: overall opinion and likelihood to recommend.
 
 IBIS is a single-item, easily administered scale. With preliminary evidence that it can prospectively predict social media usage, it does hold potential as an addition to studies where consumer behaviors are of interest.
