@@ -54,7 +54,7 @@ library(readr)
 #VIF
 library(car)
 
-data = read_csv('~/2018 Research/F18 Diary/Data/sm_final.csv')
+data = read_csv('~sm_final.csv')
 
 head(data)
 ```
