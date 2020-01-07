@@ -12,6 +12,9 @@ toc: true
 toc_label: "Table of Contents"
 toc_sticky: true
 ---
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
 
 # Multilevel Modeling: A brief primer
 
