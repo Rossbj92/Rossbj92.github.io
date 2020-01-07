@@ -1,4 +1,6 @@
-Repository for my personal Github page, forked from the [Minimal Mistakes Jekyll theme](https://mmistakes.github.io/minimal-mistakes/)
+# Description
+
+Repository for my personal Github page, forked from the [Minimal Mistakes Jekyll theme](https://mmistakes.github.io/minimal-mistakes/).
 
 
 ## License
