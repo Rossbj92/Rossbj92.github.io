@@ -14,9 +14,9 @@ toc_sticky: true
 ---
 
 # Study Overview
-This collection of notebooks surrounds a diary study that I assisted with. Diary studies are longitudinal studies in which participants routinely complete surveys throughout. These are especially useful for tracking things such as mood, exercise/diet habits, and for our intents and purposes, social media usage. 
+This collection of notebooks surrounds a diary study that I assisted with. Diary studies are longitudinal studies in which participants routinely complete surveys throughout. These are especially useful for tracking things such as mood, exercise/diet habits, and for our intents and purposes, social media usage.
 
-In this notebook, I'll be walking through the process of converting the raw data from wide to long format. All of the accompanying datasets can be found here [insert link].
+In this notebook, I'll be walking through the process of converting the raw data from wide to long format. All of the accompanying datasets can be found [here](https://github.com/Rossbj92/IBIS/tree/master/Data).
 
 In the initial survey (day 0), participants were asked to give several different types of ratings for 6 social media platforms: Facebook, Youtube, Snapchat, Instagram, Twitter, and Pinterest. Aside from the IBIS measure, several ubiquitous market research measures were used:
 1. Purchase Intention ("_use")

@@ -40,7 +40,7 @@ The actual modeling will follow these steps:
 
 # Modeling
 
-For the actual modeling, we'll be using the lme4 library in R. We'll also be using the performance library to easily compare models.
+For the actual modeling, we'll be using the lme4 library in R.
 
 First, we need to import the data and necessary R packages.
 
@@ -73,7 +73,7 @@ head(data)
 
 ## Fixed-intercept
 
-We first fit a fixed intercept-only model to establish a baseline. When we compare models to see if random intercepts are justified, we need a way to quantify this. To do so, we will be doing chi-square difference tests. Each model will have an associated log-likelihood value; by subtracting our proposed model's log-likelihood from the prior model, we can perform a chi-square test to check for significant differences. With a lower log-likelihood indicating greater model fit, a significant, positive chi-square difference justifies the new model. If this is confusing, we'll set it in action in a moment.
+We first fit a fixed intercept-only model to establish a baseline. When we compare models to see if random intercepts are justified, we need a way to quantify this. To do so, we will be doing chi-square difference tests. Each model will have an associated log-likelihood value; by subtracting our proposed model's log-likelihood from the prior model, we can perform a chi-square test to check for significant differences. With a higher log-likelihood indicating greater model fit, a significant, positive chi-square difference justifies the new model. If this is confusing, we'll set it in action in a moment.
 
 First, we need to establish our baseline.
 
@@ -163,7 +163,7 @@ anova(rand_int_parts, fixed_int)
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ```
 
-We can see that there is a reduction in log-likelihood of 184.65, and with p < 0.001, that this is significant. Our addition of random-intercepts for participants is justified.
+We can see that there is an increase in log-likelihood of 184.65, and with p < 0.001, that this is significant. Our addition of random-intercepts for participants is justified.
 
 ## Random-intercepts - Platforms
 
@@ -272,7 +272,7 @@ summary(ibis_alone)
 ## percep -0.506
 ```
 
-Looking at the ```fixed effects``` table, we see that the coefficient for IBIS (i.e., percep) is 1.55 with, p < 0.001! We can interpret this as a 1-unit increase in IBIS (for each increasing overlap chosen in the scale), weekly social media usage for that platform increases by 1.55 hours, and that this is significant.
+Looking at the ```fixed effects``` table, we see that the coefficient for IBIS (i.e., percep) is 1.55 with, p < 0.001! We can interpret this as for each 1-unit increase in IBIS (for each increasing overlap chosen in the scale), weekly social media usage for that platform increases by 1.55 hours, and that this is significant.
 
 
 ### Full Model
